@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    margin: 0;
+}
+
+#game {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+#rules {
+    position: absolute;
+    top: 10%;
+    right: -110%;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#rules > div {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#rules > div > div {
+    margin-right: 20px;
+}
+
+#mastermind {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+#line-generator {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.line {
+    margin: 2% 5px;
+    width: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#secret-line {
+    width: 100%;
+    height: 20%;
+    margin: 30px 0;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+#secret-line .hole {
+    height: 40px;
+    width: 40px;
+}
+
+.hole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(164, 161, 161);
+    border-radius: 50%;
+    color: #cec5c5;
+    font-size: 30px;
+    box-shadow: inset 0 0 1px 2px rgb(50, 50, 50);
+    transition: .3s;
+}
+
+.active-hole {
+    background-color: rgba(230, 230, 230, 0.5);
+}
+
+.checker {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
+}
+
+.little-hole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1px;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: grey;
+}
+
+.white-dot {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.red-dot {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #d36363;
+}
+
+#undoButton {
+    margin-top: 10px;
+    position: relative;
+    border-radius: 25%;
+    background-color: white;
+    padding: 10px 13px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+#undoButton:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 105%;
+    height: 105%;
+    background-color: red;
+    z-index: -1;
+    transform: translate(-50px);
+    transition: .3s;
+    pointer-events: none;
+}
+
+#undoButton:hover {
+    color: white;
+}
+
+#undoButton:hover:before {
+    transform: translate(0);
+}
+
+#undoButton:active:before {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+}
+
+#color-pallet {
+    margin: 0 0 20px 15px;
+    width: 50px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.color {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.color:hover {
+    transform: scale(0.95);
+}
+
+.cb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cb:hover {
+    outline: 1px solid white;
+}
+
+#color-red {
+    background-color: #de3232;
+}
+
+#color-blue {
+    background-color: #5e5ef8;
+}
+
+#color-purple {
+    background-color: #bd47bd;
+}
+
+#color-green {
+    background-color: #32bb32;
+}
+
+#color-orange {
+    background-color: #EC7511FF;
+}
+
+#color-yellow {
+    background-color: #cece42;
+}
+
+.red {
+    background-color: #de3232;
+}
+
+.blue {
+    background-color: #5e5ef8;
+}
+
+.purple {
+    background-color: #bd47bd;
+}
+
+.green {
+    background-color: #32bb32;
+}
+
+.orange {
+    background-color: #EC7511FF;
+}
+
+.yellow {
+    background-color: #cece42;
+}
+
+/* FINAL TEXT WIN/LOOSE */
+
+h3 {
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+.loose {
+    color: red;
+}
+
+.win {
+    color: green
+}
