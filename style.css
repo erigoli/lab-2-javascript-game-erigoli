@@ -5,8 +5,8 @@
 body {
     height: 100vh;
     font-family: 'Lato', sans-serif;
-    background-color: rgb(50, 50, 50);
-    color: white;
+    background-color: rgb(35, 43, 63); /* Dark blue background */
+    color: #fff; /* White text color */
     margin: 0;
 }
 
@@ -42,7 +42,7 @@ body {
 
 #mastermind {
     position: relative;
-    background-color: white;
+    background-color: #2b2d42; /* Darker blue */
     border-radius: 5px;
     padding-bottom: 20px;
 }
@@ -213,51 +213,51 @@ hr {
 }
 
 #color-red {
-    background-color: #de3232;
+    background-color: #de3232; /* Red */
 }
 
 #color-blue {
-    background-color: #5e5ef8;
+    background-color: #5e5ef8; /* Blue */
 }
 
 #color-purple {
-    background-color: #bd47bd;
+    background-color: #bd47bd; /* Purple */
 }
 
 #color-green {
-    background-color: #32bb32;
+    background-color: #32bb32; /* Green */
 }
 
 #color-orange {
-    background-color: #EC7511FF;
+    background-color: #EC7511FF; /* Orange */
 }
 
 #color-yellow {
-    background-color: #cece42;
+    background-color: #cece42; /* Yellow */
 }
 
 .red {
-    background-color: #de3232;
+    background-color: #de3232; /* Red */
 }
 
 .blue {
-    background-color: #5e5ef8;
+    background-color: #5e5ef8; /* Blue */
 }
 
 .purple {
-    background-color: #bd47bd;
+    background-color: #bd47bd; /* Purple */
 }
 
 .green {
-    background-color: #32bb32;
+    background-color: #32bb32; /* Green */
 }
 
 .orange {
-    background-color: #EC7511FF;
+    background-color: #EC7511FF; /* Orange */
 }
 
 .yellow {
-    background-color: #cece42;
+    background-color: #cece42; /* Yellow */
 }
 
 /* FINAL TEXT WIN/LOOSE */
@@ -271,9 +271,9 @@ h3 {
 }
 
 .loose {
-    color: red;
+    color: #ff5050; /* Light red */
 }
 
 .win {
-    color: green
+    color: #3bb143; /* Light green */
 }
