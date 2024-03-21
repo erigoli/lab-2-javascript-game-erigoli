@@ -1,5 +1,5 @@
 # Lab 2 - Mastermind
-## A javascript implementation of Mastermind
+## A JavaScript/HTML/Bootstrap implementation of Mastermind
 
 ## Goal
 You are going to re-implement you Mastermine progam in Javascript.
